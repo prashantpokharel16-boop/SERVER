@@ -1,178 +1,120 @@
-# Advanced Facebook-Style Scrolling Website
-
-Create these files in your GitHub repository.
-
----
-
-# 1. index.html
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prajwal Pokharel</title>
+  <title>Flex Zone</title>
 
   <link rel="stylesheet" href="style.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
   <nav>
-    <div class="logo">PRAJWAL</div>
+    <h1>FLEX ZONE</h1>
 
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#videos">Videos</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#cars">Cars</a></li>
+      <li><a href="#setup">Setup</a></li>
+      <li><a href="#money">Lifestyle</a></li>
     </ul>
   </nav>
 
   <section class="hero" id="home">
+
     <div class="overlay"></div>
 
     <div class="hero-content">
-      <h1>Prajwal Pokharel</h1>
+
+      <h2>WELCOME TO THE FLEX LIFE</h2>
+
       <p>
-        Advanced animated website hosted free on GitHub Pages.
+        Cars. Money. Gaming. Luxury. Style.
       </p>
 
-      <a href="#about" class="btn">Explore More</a>
+      <button onclick="showMessage()">
+        Enter Flex
+      </button>
+
     </div>
+
   </section>
 
-  <section class="about" id="about">
-    <div class="section-title">
-      <h2>About Me</h2>
-    </div>
+  <section class="cards-section" id="cars">
 
-    <div class="about-container">
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" alt="profile">
+    <h2>Luxury Cars</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop">
+        <h3>Lamborghini</h3>
       </div>
 
-      <div class="about-text">
-        <h3>Hello 👋</h3>
-
-        <p>
-          I am Prajwal Pokharel.
-          This is a modern scrolling website inspired by social media style layouts.
-        </p>
-
-        <div class="stats">
-          <div class="card">
-            <h4>100+</h4>
-            <p>Projects</p>
-          </div>
-
-          <div class="card">
-            <h4>500+</h4>
-            <p>Followers</p>
-          </div>
-
-          <div class="card">
-            <h4>24/7</h4>
-            <p>Creative</p>
-          </div>
-        </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
+        <h3>Supercars</h3>
       </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1200&auto=format&fit=crop">
+        <h3>Night Drive</h3>
+      </div>
+
     </div>
+
   </section>
 
-  <section class="features">
-    <div class="section-title">
-      <h2>Features</h2>
-    </div>
+  <section class="video-section">
 
-    <div class="feature-grid">
+    <h2>Flex Video</h2>
 
-      <div class="feature-card">
-        <h3>Animated Design</h3>
-        <p>
-          Smooth hover and scrolling effects.
-        </p>
-      </div>
+    <video controls autoplay muted loop>
 
-      <div class="feature-card">
-        <h3>Video Support</h3>
-        <p>
-          Embed YouTube or local videos easily.
-        </p>
-      </div>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
 
-      <div class="feature-card">
-        <h3>Responsive</h3>
-        <p>
-          Works on desktop and mobile devices.
-        </p>
-      </div>
+    </video>
 
-      <div class="feature-card">
-        <h3>Modern UI</h3>
-        <p>
-          Dark mode glassmorphism layout.
-        </p>
-      </div>
-
-    </div>
   </section>
 
-  <section class="videos" id="videos">
-    <div class="section-title">
-      <h2>Featured Video</h2>
+  <section class="cards-section" id="setup">
+
+    <h2>Gaming Setup</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1200&auto=format&fit=crop">
+        <h3>RGB Setup</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=1200&auto=format&fit=crop">
+        <h3>Streaming Room</h3>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">
+        <h3>Gaming Beast</h3>
+      </div>
+
     </div>
 
-    <div class="video-box">
-      <iframe
-        src="https://www.youtube.com/embed/jNQXAC9IVRw"
-        title="YouTube video player"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
-    </div>
   </section>
 
-  <section class="gallery" id="gallery">
-    <div class="section-title">
-      <h2>Gallery</h2>
-    </div>
+  <section class="quote-section" id="money">
 
-    <div class="gallery-grid">
-      <img src="https://picsum.photos/500/600?1">
-      <img src="https://picsum.photos/500/600?2">
-      <img src="https://picsum.photos/500/600?3">
-      <img src="https://picsum.photos/500/600?4">
-      <img src="https://picsum.photos/500/600?5">
-      <img src="https://picsum.photos/500/600?6">
-    </div>
-  </section>
+    <h2>"Success is the best flex."</h2>
 
-  <section class="contact" id="contact">
-    <div class="section-title">
-      <h2>Contact</h2>
-    </div>
-
-    <form>
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea rows="5" placeholder="Message"></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
   </section>
 
   <footer>
-    <h3>Prajwal Pokharel</h3>
-    <p>Made with HTML + CSS + JavaScript</p>
+
+    <h3>Made By Prajwal Pokharel</h3>
+
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
-
