@@ -1,234 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:
-    radial-gradient(circle at top left,#4f46e5 0%,transparent 30%),
-    radial-gradient(circle at bottom right,#06b6d4 0%,transparent 30%),
-    #070b14;
-
-    color:white;
-    min-height:100vh;
-    padding:40px 20px;
+html,body{
+    width:100%;
     overflow-x:hidden;
 }
 
-/* MAIN CONTAINER */
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
 
 .container{
     width:100%;
-    max-width:1300px;
-    margin:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.section{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
     text-align:center;
 }
 
-/* MAIN HEADING */
+.hero{
+    width:100%;
+    min-height:100vh;
 
-h1{
-    font-size:95px;
-    font-weight:800;
-    margin-bottom:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-    background:linear-gradient(
-    to right,
-    #ffffff,
-    #60a5fa,
-    #818cf8,
-    #c084fc
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-
-    text-shadow:0 0 40px rgba(96,165,250,0.4);
+    text-align:center;
 }
-
-/* SUBTITLE */
-
-.subtitle{
-    font-size:28px;
-    color:#dbeafe;
-    margin-bottom:45px;
-    font-weight:500;
-}
-
-/* BUTTON */
-
-button{
-    padding:20px 55px;
-    border:none;
-    border-radius:18px;
-
-    background:linear-gradient(
-    135deg,
-    #2563eb,
-    #4f46e5,
-    #7c3aed
-    );
-
-    color:white;
-    font-size:20px;
-    font-weight:700;
-    cursor:pointer;
-
-    transition:0.3s;
-
-    box-shadow:
-    0 0 25px rgba(37,99,235,0.5),
-    0 0 60px rgba(79,70,229,0.35);
-}
-
-button:hover{
-    transform:translateY(-6px) scale(1.04);
-
-    box-shadow:
-    0 0 40px rgba(37,99,235,0.8),
-    0 0 80px rgba(79,70,229,0.5);
-}
-
-/* SECTIONS */
-
-.section{
-    margin-top:120px;
-}
-
-/* BIG SECTION HEADINGS */
-
-.section h2{
-    font-size:58px;
-    font-weight:800;
-    margin-bottom:35px;
-
-    background:linear-gradient(
-    to right,
-    #60a5fa,
-    #818cf8,
-    #c084fc
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-
-    text-shadow:0 0 30px rgba(96,165,250,0.25);
-}
-
-.section p{
-    max-width:950px;
-    margin:auto;
-    line-height:2;
-    font-size:20px;
-    color:#dbeafe;
-}
-
-/* FEATURE CARDS */
 
 .cards{
-    margin-top:90px;
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:35px;
-}
-
-.card{
-    background:rgba(17,24,39,0.9);
-
-    border:2px solid rgba(96,165,250,0.15);
-
-    padding:40px;
-    border-radius:28px;
-
-    transition:0.4s;
-
-    backdrop-filter:blur(12px);
-
-    box-shadow:0 0 25px rgba(37,99,235,0.08);
-}
-
-.card:hover{
-    transform:translateY(-12px);
-
-    border-color:#60a5fa;
-
-    box-shadow:
-    0 0 30px rgba(37,99,235,0.35),
-    0 0 60px rgba(79,70,229,0.18);
-}
-
-.card h3{
-    font-size:30px;
-    margin-bottom:18px;
-
-    color:#60a5fa;
-
-    text-shadow:0 0 15px rgba(96,165,250,0.4);
-}
-
-.card p{
-    color:#dbeafe;
-    line-height:1.9;
-    font-size:17px;
-}
-
-/* VERIFIED MEMBERS */
-
-.members{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:28px;
-    margin-top:40px;
-}
-
-.member{
-    background:linear-gradient(
-    135deg,
-    rgba(37,99,235,0.18),
-    rgba(124,58,237,0.18)
-    );
-
-    border:2px solid rgba(96,165,250,0.2);
-
-    padding:22px 40px;
-
-    border-radius:20px;
-
-    font-size:22px;
-    font-weight:600;
-
-    transition:0.3s;
-
-    box-shadow:0 0 20px rgba(37,99,235,0.12);
-}
-
-.member:hover{
-    transform:translateY(-6px);
-
-    box-shadow:
-    0 0 30px rgba(37,99,235,0.35),
-    0 0 60px rgba(79,70,229,0.18);
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    h1{
-        font-size:58px;
-    }
-
-    .subtitle{
-        font-size:20px;
-    }
-
-    .section h2{
-        font-size:42px;
-    }
-
+    width:100%;
 }
