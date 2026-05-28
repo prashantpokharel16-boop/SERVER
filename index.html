@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G2G Marketplace</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // FORCED LOGIN GUARD: If user hasn't logged in, redirect them to sign-up interface
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "auth.html";
+        }
+    </script>
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <header class="navbar">
         <div class="logo">
             <i class="fa-solid fa-shield-halved"></i> G2G MARKETPLACE
@@ -23,19 +27,17 @@
             <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
         </nav>
-        <a href="https://discord.gg/xjeHqgyZH" target="_blank" class="btn btn-discord"><i class="fa-brands fa-discord"></i> JOIN DISCORD</a>
+        <div class="nav-auth-buttons">
+            <button onclick="logoutUser()" class="btn btn-outline" style="cursor:pointer;"><i class="fa-solid fa-right-from-bracket"></i> LOGOUT</button>
+        </div>
     </header>
 
-    <!-- MAIN CONTAINER -->
     <main class="container">
         
-        <!-- LEFT CONTENT & RIGHT SIDEBAR SECTION -->
         <div class="layout-grid">
             
-            <!-- LEFT MAIN CONTENT -->
             <div class="main-content">
                 
-                <!-- HERO SECTION -->
                 <section id="home" class="hero">
                     <div class="hero-text">
                         <h1>G2G <br><span class="highlight">MARKETPLACE</span></h1>
@@ -53,7 +55,6 @@
                     </div>
                 </section>
 
-                <!-- STATS BAR -->
                 <div class="stats-bar">
                     <div class="stat-item"><i class="fa-solid fa-users"></i> <div><strong>5K+</strong><p>Trusted Members</p></div></div>
                     <div class="stat-item"><i class="fa-solid fa-circle-check"></i> <div><strong>2K+</strong><p>Successful Deals</p></div></div>
@@ -61,7 +62,6 @@
                     <div class="stat-item"><i class="fa-solid fa-lock"></i> <div><strong>100%</strong><p>Safe & Secure</p></div></div>
                 </div>
 
-                <!-- ABOUT SECTION -->
                 <section id="about" class="card about-card">
                     <div class="about-icon">
                         <i class="fa-brands fa-discord"></i>
@@ -72,7 +72,6 @@
                     </div>
                 </section>
 
-                <!-- FEATURES GRID -->
                 <section id="features" class="features-section">
                     <h3>OUR FEATURES</h3>
                     <div class="features-grid">
@@ -121,7 +120,6 @@
                     </div>
                 </section>
 
-                <!-- GIVEAWAY BANNER -->
                 <div class="card giveaway-card">
                     <div class="giveaway-content">
                         <i class="fa-solid fa-gift large-gift-icon"></i>
@@ -135,10 +133,8 @@
 
             </div>
 
-            <!-- RIGHT SIDEBAR (TEAM & REVIEWS) -->
             <aside class="sidebar">
                 
-                <!-- VERIFIED TEAM -->
                 <div id="team" class="sidebar-card">
                     <h3>VERIFIED TEAM MEMBERS</h3>
                     <ul class="team-list">
@@ -157,7 +153,6 @@
                     </ul>
                 </div>
 
-                <!-- RECENT REVIEWS -->
                 <div id="reviews" class="sidebar-card">
                     <h3>RECENT REVIEWS</h3>
                     <div class="review-item">
@@ -186,7 +181,6 @@
             </aside>
         </div>
 
-        <!-- BOTTOM CALL TO ACTION -->
         <section class="cta-banner">
             <div class="cta-text">
                 <h2>READY TO TRADE SAFELY?</h2>
@@ -197,7 +191,6 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer id="contact">
         <p>&copy; 2026 G2G Marketplace. All Rights Reserved.</p>
         <div class="social-icons">
@@ -207,5 +200,11 @@
         </div>
     </footer>
 
+    <script>
+        function logoutUser() {
+            localStorage.removeItem("isLoggedIn");
+            window.location.href = "auth.html";
+        }
+    </script>
 </body>
 </html>
